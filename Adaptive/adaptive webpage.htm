@@ -105,27 +105,15 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mobile-1.4.4.min.js"></script>
 
-	<div id="banner"><img src="https://www.ibm.com/developerworks/mydeveloperworks/blogs/bobleah/resource/sky.gif"></div>
+	<div id="banner"><img src="ResponsiveDesign.jpg"></div>
 	<div id="main">
 	  <div id="main-content">
 	  <p><a href="../index.htm" data-ajax="false">Home </a> / Responsive</p>
       <p> 
-       This  is a demonstration of how a responsive page can be created with simple HTML5/CSS.
+       This  is a demonstration of how a responsive page can be created with simple HTML5/CSS. The page automatically rearranges the content depending on the screen real-estate.
       </p>
-      <p> 
-       The page uses floating DIV elements to structure the content.
-      </p>
-      <p> 
-       The CSS sets a default size for the DIV elements (targeted at large screens on PC/Laptop). The CSS then uses Media Queries to over-write the CSS for smaller screens.
-      </p>
-      <p> 
-       In total, there are 3 media-query over-writes: 
-       <ul><li>The default is for large screens (which sets a maximum size for the content).</li>
-        <li>The first over-ride changes the style to use percentages so the sizes of each area shrink as the screen shrinks.</li>
-        <li>The second over-ride changes the style so that the 3 Widgets appear alongside each other, instead of on the right-hand-side.</li>
-        <li>The final over-rise changes the style so that everything is serialised in one vertical scrolling page.</li>
-      </ul>
-      </p>
+      
+      <div style="float:right; width:100%;">
       <div style="float:left; ">
       <p>Large i.e. PC</p>
       <canvas id="myCanvas" width="160" height="125"></canvas>
@@ -249,8 +237,28 @@
         context3.strokeStyle = 'black';
         context3.stroke();
       </script>            
-          </div>    
-    
+          </div>   
+      </div> 
+      <div >    
+      
+
+
+
+      <p> 
+       The page uses floating DIV elements to structure the content.
+      </p>
+      <p> 
+       The CSS sets a default size for the DIV elements (targeted at large screens on PC/Laptop). The CSS then uses Media Queries to over-write the CSS for smaller screens.
+      </p>
+      <p> 
+       In total, there are 3 media-query over-writes: 
+       <ul><li>The default is for large screens (which sets a maximum size for the content).</li>
+        <li>The first over-ride changes the style to use percentages so the sizes of each area shrink as the screen shrinks.</li>
+        <li>The second over-ride changes the style so that the 3 Widgets appear alongside each other, instead of on the right-hand-side.</li>
+        <li>The final over-rise changes the style so that everything is serialised in one vertical scrolling page.</li>
+      </ul>
+      </p>
+      </div>
 	 </div> 
 <div id="widget-container">
 
