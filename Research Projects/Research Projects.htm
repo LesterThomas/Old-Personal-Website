@@ -21,236 +21,68 @@
   <script src="js/json2html.js"></script>
   <script src="js/jquery.json2html.js"></script>
 
-
 	<div id="banner"><img src="images/Research-Projects.gif"></div>
+
 	<div id="main">
 	  <div id="main-content">
 	  <p><a href="../index.htm" data-ajax="false">Home </a> / Research Projects</p>
-      <p> 
-      <div src="project node-red.htm"/>
-      <div data-role="collapsible"  data-mini="true" >
-        <h4>Node-Red on Raspberry Pi</h4>
-<p>
-  Link to <a href="http://lesterthomas.ddns.net:1880" data-ajax="false" target="new">Node-Red on Raspberry Pi </a>
-</br>The link above takes you to the Development Environment for Node-Red running on my Raspberry Pi (configured as a <a href="http://thethingbox.io/" data-ajax="false">TheThingBox</a>.)
-</p>
-    </div>  
-    <div data-role="collapsible"  data-mini="true">
-      <h4>Node.js on Heroku</h4>
-      <p>
-      
-      </p>      
-    </div> 
-    <div id="projects">
-            
-    </div>  
-
-      </p>
-      
-      <div style="float:right; width:100%;">
-      <div style="float:left; ">
-      <p>Large i.e. PC</p>
-      <canvas id="myCanvas" width="160" height="125"></canvas>
-      <script>
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext('2d');
-
-        context.beginPath();
-        context.rect(5, 5, 150, 20);
-        //context.fillStyle = 'yellow';
-        //context.fill();
-        context.lineWidth = 2;
-        context.strokeStyle = 'black';
-        context.stroke();
-
-        context.beginPath();
-        context.rect(5, 30, 95, 85);
-        context.lineWidth = 2;
-        context.strokeStyle = 'black';
-        context.stroke();
-
-        context.beginPath();
-        context.rect(105, 30, 50, 25);
-        context.lineWidth = 2;
-        context.strokeStyle = 'black';
-        context.stroke();
-
-        context.beginPath();
-        context.rect(105, 60, 50, 25);
-        context.lineWidth = 2;
-        context.strokeStyle = 'black';
-        context.stroke();
-
-        context.beginPath();
-        context.rect(105, 90, 50, 25);
-        context.lineWidth = 2;
-        context.strokeStyle = 'black';
-        context.stroke();
-      </script>
-    </div>
-
-    
-    <div style="float:left; ">
-
-<p>Medium i.e. Tablet</p>
-      <canvas id="myCanvas2" width="160" height="125"></canvas>
-      <script>
-        var canvas2 = document.getElementById('myCanvas2');
-        var context2 = canvas2.getContext('2d');
-
-        context2.beginPath();
-        context2.rect(20, 5, 80, 20);
-        //context.fillStyle = 'yellow';
-        //context.fill();
-        context2.lineWidth = 2;
-        context2.strokeStyle = 'black';
-        context2.stroke();
-
-        context2.beginPath();
-        context2.rect(20, 30, 80, 60);
-        context2.lineWidth = 2;
-        context2.strokeStyle = 'black';
-        context2.stroke();
-
-        context2.beginPath();
-        context2.rect(20, 95, 22, 25);
-        context2.lineWidth = 2;
-        context2.strokeStyle = 'black';
-        context2.stroke();
-
-        context2.beginPath();
-        context2.rect(48, 95, 22, 25);
-        context2.lineWidth = 2;
-        context2.strokeStyle = 'black';
-        context2.stroke();
-
-        context2.beginPath();
-        context2.rect(77, 95, 22, 25);
-        context2.lineWidth = 2;
-        context2.strokeStyle = 'black';
-        context2.stroke();
-      </script>
-    </div>
-<div style="float:left; ">
-
-<p>Small i.e. Phone </p>
-      <canvas id="myCanvas3" width="85" height="220"></canvas>
-      <script>
-        var canvas3 = document.getElementById('myCanvas3');
-        var context3 = canvas3.getContext('2d');
-
-        context3.beginPath();
-        context3.rect(40, 5, 40, 20);
-        //context3.fillStyle = 'yellow';
-        //context3.fill();
-        context3.lineWidth = 2;
-        context3.strokeStyle = 'black';
-        context3.stroke();
-
-        context3.beginPath();
-        context3.rect(40, 30, 40, 85);
-        context3.lineWidth = 2;
-        context3.strokeStyle = 'black';
-        context3.stroke();
-
-        context3.beginPath();
-        context3.rect(40, 120, 40, 25);
-        context3.lineWidth = 2;
-        context3.strokeStyle = 'black';
-        context3.stroke();
-
-        context3.beginPath();
-        context3.rect(40, 150, 40, 25);
-        context3.lineWidth = 2;
-        context3.strokeStyle = 'black';
-        context3.stroke();
-
-        context3.beginPath();
-        context3.rect(40, 180, 40, 25);
-        context3.lineWidth = 2;
-        context3.strokeStyle = 'black';
-        context3.stroke();
-      </script>            
-          </div>   
-      </div> 
-      <div >    
-      
-
-
-
-      <p> 
-       The page uses floating DIV elements to structure the content.
-      </p>
-      <p> 
-       The CSS sets a default size for the DIV elements (targeted at large screens on PC/Laptop). The CSS then uses Media Queries to over-write the CSS for smaller screens.
-      </p>
-      <p> 
-       In total, there are 3 media-query over-writes: 
-       <ul><li>The default is for large screens (which sets a maximum size for the content).</li>
-        <li>The first over-ride changes the style to use percentages so the sizes of each area shrink as the screen shrinks.</li>
-        <li>The second over-ride changes the style so that the 3 Widgets appear alongside each other, instead of on the right-hand-side.</li>
-        <li>The final over-rise changes the style so that everything is serialised in one vertical scrolling page.</li>
-      </ul>
-      </p>
-      </div>
+    <p/> 
+    <div id="projects"> <!--The actual projects are loaded via JSON2HTML below--></div>  
 	 </div> 
-<div id="widget-container">
 
-  <div class="widget-content">
-   <div class="widget-title">
-         Responsive web designs
-   </div>
-   <div class="widget-text">
-         Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience: Easy reading and navigation with a minimum of resizing, panning, and scrolling across a wide range of devices. 
-         A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, and CSS3 media queries.
-
-   </div>
-  </div> 
-  <div class="widget-content">
-   <div class="widget-title">
-         CSS float property 
-   </div>
-   <div class="widget-text">
-         Float is a CSS positioning property. Any block-level element can be assigned a float property to make it float to the left or right. Subsequent elements will flow around it. In web design, page elements with the CSS float property applied to them are just like the images in a Newspaper where the text flows around them. Floated elements remain a part of the flow of the web page. 
-   </div>
-  </div>  
-
-  <div class="widget-content">
-   <div class="widget-title">
-         Media queries
-   </div>
-   <div class="widget-text">
-          CSS Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. This means you can use CSS Media Queries to tweak a CSS for an iPad, printer or create a responsive site. This page uses Media queries based on screen size. 
-   </div>
-  </div>  
-
-  
- </div>
-	 </div>
+  <div id="widget-container">
+    <div class="widget-content">
+       <div class="widget-title">
+             Responsive web designs
+       </div>
+       <div class="widget-text">
+             Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience: Easy reading and navigation with a minimum of resizing, panning, and scrolling across a wide range of devices. 
+             A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, and CSS3 media queries.
+       </div>
+    </div> 
+    <div class="widget-content">
+       <div class="widget-title">
+             CSS float property 
+       </div>
+       <div class="widget-text">
+             Float is a CSS positioning property. Any block-level element can be assigned a float property to make it float to the left or right. Subsequent elements will flow around it. In web design, page elements with the CSS float property applied to them are just like the images in a Newspaper where the text flows around them. Floated elements remain a part of the flow of the web page. 
+       </div>
+    </div>  
+    <div class="widget-content">
+       <div class="widget-title">
+             Media queries
+       </div>
+       <div class="widget-text">
+              CSS Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. This means you can use CSS Media Queries to tweak a CSS for an iPad, printer or create a responsive site. This page uses Media queries based on screen size. 
+       </div>
+    </div>  
+  </div>
+</div>
 
 <script>
-$( document ).ready(function() {
   
-  alert("start");
-  var transform =[{"tag":"div","data-role":"collapsible","data-mini":"true","children":[
-      {"tag":"h4","html":"Title"},
-      {"tag":"p","html":"Description"}
-    ]}];
-  alert(transform);
+  //populate the projects list with JSON2HTML template
+  var transform ={"tag":"div","data-role":"collapsible","data-mini":"true","children":[
+    {"tag":"h4","html":"${Title}"},
+    {"tag":"p","html":"${Description}"}
+  ]}
 
-  $.getJSON("http://www.lester-thomas.com/Research%20Projects/projects.json", null, function(json) {
-      alert(json);
-   
-      $('#projects').json2html(json,transform);
-  }).done(function() {
-    alert( "second success" );
-  })
-  .fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus); alert("incoming Text " + jqXHR.responseText); })
-  .always(function() {
-    alert( "complete" );
-  });
+  /*var json= [{
+          "Title": "Node-Red on Raspberry Pi",
+          "projectBrief": "Node-Red",
+          "Description": "Link to <a href=\"http://lesterthomas.ddns.net:1880\" data-ajax=\"false\" target=\"new\">Node-Red on Raspberry Pi </a></br>The link above takes you to the Development Environment for Node-Red running on my Raspberry Pi (configured as a <a href=\"http://thethingbox.io/\" data-ajax=\"false\">TheThingBox</a>.)"
+        },{
+          "Title": "Node.js on Heroku",
+          "projectBrief": "Node-Red2",
+          "Description": "Node-Red Description2"
+        }];*/
 
-});
+    $.getJSON("projects.json", function(json) {
+        $('#projects').json2html(json,transform);
+      });
+    
+
+
 
 
 
