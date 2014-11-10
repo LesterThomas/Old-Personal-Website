@@ -229,19 +229,20 @@
 	 </div>
 
 <script>
-alert("start");
-var transform =[{"tag":"div","data-role":"collapsible","data-mini":"true","children":[
-    {"tag":"h4","html":"Title"},
-    {"tag":"p","html":"Description"}
-  ]}];
-alert(transform);
+$( document ).ready(function() {
+  alert("start");
+  var transform =[{"tag":"div","data-role":"collapsible","data-mini":"true","children":[
+      {"tag":"h4","html":"Title"},
+      {"tag":"p","html":"Description"}
+    ]}];
+  alert(transform);
 
-$.getJSON("projects.json", function(json) {
-    alert(json);
- 
-    $('#projects').json2html(json,transform);
-});
-
+  $.getJSON("projects.json", function(json) {
+      alert(json);
+   
+      $('#projects').json2html(json,transform);
+  }); 
+};
 
 
 </script>
