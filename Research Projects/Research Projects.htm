@@ -81,6 +81,7 @@
     $.getJSON("projects.json", function(json) {
         $('#projects').json2html(json,transform);
         $(".projectDivs").each(function( index ) {
+          alert($(this).html());
           $(this).trigger('create');
           });
       });
