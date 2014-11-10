@@ -235,23 +235,14 @@ var transform =[{"tag":"div","data-role":"collapsible","data-mini":"true","child
     {"tag":"p","html":"Description"}
   ]}];
 alert(transform);
-var projectsJSON={
-  "projects": [
-    {
-      "projectName": "Node-Red",
-      "projectBrief": "Node-Red",
-      "projectDescription": "Node-Red"
-    },
-    {
-      "projectName": "Node-Red2",
-      "projectBrief": "Node-Red",
-      "projectDescription": "Node-Red"
-    }
-  ]
-};
-alert(projectsJSON);
+
+$.getJSON("projects.json", function(json) {
+    alert(json);
  
-$('#projects').json2html(projectsJSON,transform);
+    $('#projects').json2html(json,transform);
+});
+
+
 
 </script>
 </body>
