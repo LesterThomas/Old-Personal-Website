@@ -79,7 +79,7 @@
 
     $.getJSON("projects.json", function(json) {
         $('#projects').json2html(json,transform);
-        $("#projectDivs").collapsible({refresh:true});
+        $("#projectDivs").trigger('create');
 
       });
 
