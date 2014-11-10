@@ -1,14 +1,14 @@
 {
   "projects": [
     {
-      "projectName": "Node-Red",
+      "Title": "Node-Red",
       "projectBrief": "Node-Red",
-      "projectDescription": "Node-Red"
+      "Description": "Node-Red"
     },
     {
-      "projectName": "Node-Red2",
+      "Title": "Node-Red2",
       "projectBrief": "Node-Red",
-      "projectDescription": "Node-Red"
+      "Description": "Node-Red"
     }
   ]
 };
