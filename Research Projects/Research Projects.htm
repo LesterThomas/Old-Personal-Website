@@ -61,6 +61,7 @@
 
 <script>
   $(document).on("pageinit", function() {
+
   //populate the projects list with JSON2HTML template
   var transform ={"tag":"div","data-role":"collapsible","data-mini":"true","class":"projectDivs","children":[
     {"tag":"h4","html":"${Title}"},
@@ -79,8 +80,9 @@
 
     $.getJSON("projects.json", function(json) {
         $('#projects').json2html(json,transform);
-        $(".projectDivs").trigger('create');
-
+        $(".projectDivs").each(function( index ) {
+          $(this).trigger('create'));
+          });
       });
 
 });
