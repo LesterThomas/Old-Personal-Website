@@ -2,8 +2,4 @@
           "Title": "Node-Red on Raspberry Pi",
           "projectBrief": "Node-Red",
           "Description": "Link to <a href=\"http://lesterthomas.ddns.net:1880\" data-ajax=\"false\" target=\"new\">Node-Red on Raspberry Pi </a></br>The link above takes you to the Development Environment for Node-Red running on my Raspberry Pi (configured as a <a href=\"http://thethingbox.io/\" data-ajax=\"false\">TheThingBox</a>.)"
-        },{
-          "Title": "Node.js on Heroku",
-          "projectBrief": "Node-Red2",
-          "Description": "Node-Red Description2"
         }]
