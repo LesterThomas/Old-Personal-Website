@@ -80,10 +80,7 @@
 
     $.getJSON("projects.json", function(json) {
         $('#projects').json2html(json,transform);
-        $(".projectDivs").each(function( index ) {
-          
-          $(this).trigger('create');
-          });
+        $("#projects").trigger('create');
       });
 
 });
