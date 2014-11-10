@@ -238,7 +238,7 @@ $( document ).ready(function() {
     ]}];
   alert(transform);
 
-  $.getJSON("projects.json", function(json) {
+  $.getJSON("http://www.lester-thomas.com/Research%20Projects/projects.json", null, function(json) {
       alert(json);
    
       $('#projects').json2html(json,transform);
