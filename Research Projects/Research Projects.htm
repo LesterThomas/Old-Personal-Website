@@ -67,7 +67,7 @@
     {"tag":"h4","html":"${Title}"},
     {"tag":"p","html":"${Description}"}
   ]}
-
+  //the JSON is loaded from an external file, but it is in this format:
   /*var json= [{
           "Title": "Node-Red on Raspberry Pi",
           "projectBrief": "Node-Red",
@@ -79,8 +79,8 @@
         }];*/
 
     $.getJSON("projects.json", function(json) {
-        $('#projects').json2html(json,transform);
-        $("#projects").trigger('create');
+        $('#projects').json2html(json,transform); //apply the template to the #projects div
+        $("#projects").trigger('create');  //cause the collabsible elements to come alive
       });
 
 });
