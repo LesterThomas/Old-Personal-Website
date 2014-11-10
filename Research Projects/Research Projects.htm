@@ -245,9 +245,7 @@ $( document ).ready(function() {
   }).done(function() {
     alert( "second success" );
   })
-  .fail(function() {
-    alert( "error" );
-  })
+  .fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus); alert("incoming Text " + jqXHR.responseText); })
   .always(function() {
     alert( "complete" );
   });
