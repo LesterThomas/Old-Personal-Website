@@ -1,0 +1,84 @@
+          #banner {
+             margin-left:auto; 
+             margin-right:auto; 
+             width:1200px;  
+          }
+
+          #banner img { 
+             max-width:1200px; 
+             
+          }
+ 
+          #main {
+            margin-left:auto;
+            margin-right:auto;
+            width:1200px; 
+
+          }    
+
+          #main-content {
+            margin:20px;
+            width:623px; 
+            float:left;
+			 
+          }  
+
+          #widget-container {
+            margin:20px;
+            width:483px; 
+            float:right;
+			
+          }   
+
+          .widget-content {
+             margin:20px; 
+             padding:1px;
+             width:443px;
+             background-color:#DDDDDD; 
+          }    
+
+          .widget-title {
+             font-weight:bold;
+			 
+             padding:5px;
+             background-color:#EEEEEE;  
+          }    
+
+          .widget-text {
+			 
+             padding:5px;
+             background-color:#FCFCFC;   
+          }   
+
+          .container {
+              margin: 100px auto 0;
+              width: 560px;
+          }
+
+          @media (min-width: 1001px) and (max-width: 1230px) {
+            #banner { width:100%; }
+            #banner img { max-width:100%; }
+            #main { width:100%; }            
+            #main-content { width:50%; }
+            #widget-container { width:40%; }
+			.widget-content { width:95%;}
+          } 
+
+          @media (min-width: 600px) and (max-width: 1000px) {
+            #banner { width:100%; }
+            #banner img { max-width:100%; }
+            #main { width:100%; }            
+            #main-content { width:95%;}
+            #widget-container { width:100%; float:left;}
+            .widget-content { width:28%;  float:left; margin:10px;}
+          }
+
+          @media (max-width: 599px) {
+            #banner { width:100%; }
+            #banner img { max-width:100%; }
+            #main { width:100%;}            
+            #main-content { width:95%;padding:1px; }
+            #widget-container { width:95%;  }
+            .widget-content { width:100%; margin:10px; }
+
+          }

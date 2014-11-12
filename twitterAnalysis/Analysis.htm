@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
+    <title>Twitter Analysis</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.4.min.css">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
+  <script src="js/json2html.js"></script>
+  <script src="js/jquery.json2html.js"></script>
+
+	<div id="banner"><img src="images/Research-Projects.gif"></div>
+
+	<div id="main">
+	  <div id="main-content">
+	  <p><a href="../index.htm" data-ajax="false">Home </a> / Twitter Analysis</p>
+    <p/> 
+    <div id="projects"> <!--The actual projects are loaded via JSON2HTML below--></div>  
+	 </div> 
+
+  <div id="widget-container">
+    <div class="widget-content">
+       <div class="widget-title">
+             Help
+       </div>
+       <div class="widget-text">
+             
+       </div>
+    </div> 
+    <div class="widget-content">
+       <div class="widget-title">
+             About 
+       </div>
+       <div class="widget-text">
+             
+       </div>
+    </div>  
+    <div class="widget-content">
+       <div class="widget-title">
+             Links
+       </div>
+       <div class="widget-text">
+              
+       </div>
+    </div>  
+  </div>
+</div>
+
+<script>
+  $(document).on("pageinit", function() {
+
+  //populate the projects list with JSON2HTML template
+  /*var transform ={"tag":"div","data-role":"collapsible","data-mini":"true","class":"projectDivs","children":[
+    {"tag":"h4","html":"${Title}"},
+    {"tag":"p","html":"${Description}"}
+  ]}*/
+  var arrayTransform={"tag":"li","html":"${id}"};
+    var transform = {"tag":"div","html":"${_id}", "children":function(){
+      return( json2html.transform(this.tweet_id,arrayTransform) );
+            }}
+  
+
+  /*
+  //the JSON is loaded from an external file, but it is in this format:
+  var json= {"_id":"Word","_rev":"1-0213667487cd23022d328c93b10a0f62","created_at":"test","tweet_id":[{"id":"test"}]};
+  $('#projects').json2html(json,transform); //apply the template to the #projects div
+  */
+
+   $.getJSON("projects.json", function(json) {
+        $('#projects').json2html(json,transform); //apply the template to the #projects div
+        $("#projects").trigger('create');  //cause the collabsible elements to come alive
+      });
+
+});
+
+
+
+
+</script>
+</body>
+</html>
