@@ -74,14 +74,15 @@
 
   /*
   //the JSON is loaded from an external file, but it is in this format:
-  var json= {"_id":"Word","_rev":"1-0213667487cd23022d328c93b10a0f62","created_at":"test","tweet_id":[{"id":"test"}]};
+  var json= {"_id":"Word","_rev":"1-0213667487cd23022d328c93b10a0f62","created_at":"test","tweet_id":[{"id":"test"},{"id":"test2"}]};
   $('#projects').json2html(json,transform); //apply the template to the #projects div
   */
 
-   $.getJSON("projects.json", function(json) {
+   $.getJSON("http://91ac744b-bf49-42c0-a4b5-c09f052dfe0f-bluemix.cloudant.com/twitter-analysis/Word", function(json) {
         $('#projects').json2html(json,transform); //apply the template to the #projects div
         $("#projects").trigger('create');  //cause the collabsible elements to come alive
       });
+
 
 });
 
