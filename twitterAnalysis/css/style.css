@@ -18,15 +18,15 @@
 
           #main-content {
             margin:20px;
-            width:1400px; 
-            float:left;
+            width: 1400px; 
+            float: left;
 			
           }  
 
           #widget-container {
-            margin:20px;
-            width:600px; 
-            float:right;
+            margin: 20px;
+            width: 600px; 
+            float: right;
 			
           }   
 		  #word {
@@ -70,8 +70,8 @@
             #banner { width:100%; }
             #banner img { max-width:100%; }
             #main { width:100%; }            
-            #main-content { width:70%; }
-            #widget-container { width:30%; }
+            #main-content { width:900px; }
+            #widget-container { width:200px; }
 			.widget-content { width:95%;}
           } 
 
