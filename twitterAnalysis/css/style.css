@@ -32,13 +32,14 @@
 		  #word {
 			position: relative;
 			width: 100%;
+			background:#ffffff;
 			}
 			
           .word {
             position: absolute;
 			left: 100px;
 			top: 150px;
-			background:#ffffff;
+			
 			
           }  
 		  .transparent {
