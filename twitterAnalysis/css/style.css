@@ -30,12 +30,18 @@
 			
           }   
 
+          .word {
+            position: absolute;
+			left: 100px;
+			top: 150px;
+          }  
+		  
           .widget-content {
              margin:20px; 
              padding:1px;
              width:443px;
              background-color:#DDDDDD; 
-          }    
+          }  		  
 
           .widget-title {
              font-weight:bold;
