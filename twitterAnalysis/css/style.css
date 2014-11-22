@@ -38,10 +38,12 @@
             position: absolute;
 			left: 100px;
 			top: 150px;
+			
+          }  
+		  .transparent {
 			background:#7f7f7f;
 			background:rgba(255,255,255,0.5);
-          }  
-		  
+		  }
 		  
           .widget-content {
              margin:20px; 
