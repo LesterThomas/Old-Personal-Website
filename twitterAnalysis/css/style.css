@@ -20,7 +20,7 @@
             margin:20px;
             width:623px; 
             float:left;
-			position: relative;
+			
           }  
 
           #widget-container {
@@ -29,7 +29,11 @@
             float:right;
 			
           }   
-
+		  #word {
+			position: relative;
+			width:100%;
+			}
+			
           .word {
             position: absolute;
 			left: 100px;
