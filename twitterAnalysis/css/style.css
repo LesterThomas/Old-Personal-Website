@@ -20,7 +20,7 @@
             margin:20px;
             width:623px; 
             float:left;
-			 
+			position: relative;
           }  
 
           #widget-container {
