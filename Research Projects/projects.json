@@ -3,17 +3,17 @@
   "projectBrief": "Node-Red",
   "Description": "Link to <a href=\"http://lesterthomas.ddns.net:1880\" data-ajax=\"false\" target=\"new\">Node-Red on Raspberry Pi </a></br>The link above takes you to the Development Environment for Node-Red running on my Raspberry Pi (configured as a <a href=\"http://thethingbox.io/\" data-ajax=\"false\">TheThingBox</a>.)"
     },{
-  "Title": "Node-Red on Blue (TBD)",
-  "projectBrief": "Node-Red",
-  "Description": "TBD "
+  "Title": "Node-Red on IBM BlueMix",
+  "projectBrief": "Node-Red on IBM BlueMix using the Cloudant no-SQL database-as-a-service from Cloudant.com",
+  "Description": "This is a project to analyse twitter-feeds over time. It uses: <ul><li>Node-red running on IBM BlueMix platform-as-a-service <a href=\"http://bluemix.net\" data-ajax=\"false\" target=\"new\">Bluemix.net</a></li><li>A CouchDb JSON document (no-SQL) database running on <a href=\"http://cloudant.com\" data-ajax=\"false\" target=\"new\">cloudant.com</a>. This stores two types of document: The original tweet (including sentiment analysis) and a document for each word included in the tweet. The word documents have a link back to each tweet that it was included in (as well as average sentiment and count of followers for these tweets).</li><li>A couple of different web-services as part of the analysis: The IBM sentiment analysis (from IBM Watson) and Wictionary (used to lookup words so that only real words are analysed)</li></ul><p>The application has server flows that constantly monitor Twitter for certain words (currently set to 'vodafone' or 'Vodafone'). It also has flows to purge the Tweet data (so that the analysis is based on a 3 day rolling view of what is being said on Twitter). Finally, it has a flow for a web-client that is available at <a href=\"http://vdd.mybluemix.net/all\" data-ajax=\"false\" target=\"new\">Twitter Analysis Application</a>"
     },{
   "Title": "Node.js on Heroku (TBD)",
   "projectBrief": "Node.js",
   "Description": "TBD "
     },{
-  "Title": " Twilio (TBD)",
+  "Title": " Twilio",
   "projectBrief": "Twilio",
-  "Description": "TBD "
+  "Description": "<a href=\"http://Twilio.com\" data-ajax=\"false\" target=\"new\">Twilio</a> provides a set of cloud services for Voice and Messaging. I've created some simple SMS integrations using my Raspberry Pi - to read incomming messages via Twilio and to respond on Twilio and by Twitter. "
     },{
   "Title": " BBC Weather (RSS feed) (TBD)",
   "projectBrief": "BBC Weather",
