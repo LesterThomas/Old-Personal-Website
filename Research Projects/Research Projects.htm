@@ -6,29 +6,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Lester Thomas Research Projects</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-
+    <script type='text/javascript' id='lt_ws' src='http://localhost:52238/socket.io/lighttable/ws.js'></script>
+    <script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
+    <script src="js/json2html.js"></script>
+    <script src="js/jquery.json2html.js"></script>
+    <script src="js/researchProjects.js"></script>
 </head>
 <body>
 	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.4.min.css">
 
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.mobile-1.4.4.min.js"></script>
-  <script src="js/json2html.js"></script>
-  <script src="js/jquery.json2html.js"></script>
+
 
 	<div id="banner"><img src="images/Research-Projects.gif"></div>
 
 	<div id="main">
 	  <div id="main-content">
 	  <p><a href="../index.htm" data-ajax="false">Home </a> / Research Projects</p>
-    <p/> 
-    <div id="projects"> <!--The actual projects are loaded via JSON2HTML below--></div>  
-	 </div> 
+    <p/>
+    <div id="projects"> <!--The actual projects are loaded via JSON2HTML below--></div>
+	 </div>
 
   <div id="widget-container">
     <div class="widget-content">
@@ -36,6 +37,7 @@
              Internet of Things (IoT)
        </div>
        <div class="widget-text">
+<<<<<<< HEAD
              <p>
 			The ability for anyone to make 'things' using cheap open-source hardware and software together with the croud-funding financing that removes any barrier to entry will drive new and unexpected innovations.
 			These may come from unlikely sources - I wouln't be surprised if some of the next big-things originate from so-called developing-markets since the technology
@@ -55,11 +57,26 @@
 			<p>My research is in experimenting with these different development tools and approaches to understand the art-of-the-possible and imagine new application areas that these new approaches open up.</p> 
 		</div>
     </div>  
+=======
+             Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience: Easy reading and navigation with a minimum of resizing, panning, and scrolling across a wide range of devices.
+             A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, and CSS3 media queries.
+       </div>
+    </div>
+    <div class="widget-content">
+       <div class="widget-title">
+             CSS float property
+       </div>
+       <div class="widget-text">
+             Float is a CSS positioning property. Any block-level element can be assigned a float property to make it float to the left or right. Subsequent elements will flow around it. In web design, page elements with the CSS float property applied to them are just like the images in a Newspaper where the text flows around them. Floated elements remain a part of the flow of the web page.
+       </div>
+    </div>
+>>>>>>> origin/master
     <div class="widget-content">
        <div class="widget-title">
              Massive-scale architectures
        </div>
        <div class="widget-text">
+<<<<<<< HEAD
             <p>
 			Massive-scale architectures for Web using no-SQL databases, stateless applications, infrastructure-as-a-service and Platform-as-a-service to run applications in the cloud. </p>
 			<p>My research is in testing different 
@@ -67,38 +84,13 @@
 			</p> 
 		</div>
     </div>  
+=======
+              CSS Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. This means you can use CSS Media Queries to tweak a CSS for an iPad, printer or create a responsive site. This page uses Media queries based on screen size.
+       </div>
+    </div>
+>>>>>>> origin/master
   </div>
 </div>
 
-<script>
-  $(document).on("pageinit", function() {
-
-  //populate the projects list with JSON2HTML template
-  var transform ={"tag":"div","data-role":"collapsible","data-mini":"true","class":"projectDivs","children":[
-    {"tag":"h4","html":"${Title}"},
-    {"tag":"p","html":"${Description}"}
-  ]}
-  //the JSON is loaded from an external file, but it is in this format:
-  /*var json= [{
-          "Title": "Node-Red on Raspberry Pi",
-          "projectBrief": "Node-Red",
-          "Description": "Link to <a href=\"http://lesterthomas.ddns.net:1880\" data-ajax=\"false\" target=\"new\">Node-Red on Raspberry Pi </a></br>The link above takes you to the Development Environment for Node-Red running on my Raspberry Pi (configured as a <a href=\"http://thethingbox.io/\" data-ajax=\"false\">TheThingBox</a>.)"
-        },{
-          "Title": "Node.js on Heroku",
-          "projectBrief": "Node-Red2",
-          "Description": "Node-Red Description2"
-        }];*/
-
-    $.getJSON("projects.json", function(json) {
-        $('#projects').json2html(json,transform); //apply the template to the #projects div
-        $("#projects").trigger('create');  //cause the collabsible elements to come alive
-      });
-
-});
-
-
-
-
-</script>
 </body>
 </html>
