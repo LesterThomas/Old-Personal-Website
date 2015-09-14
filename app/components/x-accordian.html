@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html"> 
+<link rel="import" href="../../bower_components/paper-button/paper-button.html"> 
+<link rel="import" href="../../bower_components/paper-card/paper-card.html"> 
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html"> 
+<link rel="import" href="../elements/elements.html">		
+<link rel="import" href="x-html.html"> 
+
+<dom-module id="x-accordian">
+	
+	<template>
+		<div>
+			
+			<paper-card toggles raised style="margin: 0 10px 10px 20px; width:auto;" on-click="toggleAccordian" heading="{{name}}">
+				    
+			    <iron-collapse id="theAcc">
+			      <div class="content">
+			        <div style="margin: 10px; width:auto;"><x-html innercontent="{{description}}"></x-html></div>
+			      </div>
+			    </iron-collapse>
+			</paper-card>
+
+		</div>
+	</template>
+	<script>
+
+
+	Polymer({
+		is: 'x-accordian',
+		properties: {
+		    name: String,
+		    description: String,
+		  },
+		ready: function (){	
+			console.log(this.name);
+				},
+		toggleAccordian: function(){
+			console.log('inside toggleAccorian this.$=', this.$);
+			console.log('inside toggleAccorian this.$.theAcc=', this.$.theAcc);
+
+			this.$.theAcc.toggle();
+		}
+	})
+	</script>
+</dom-module>

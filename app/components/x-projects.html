@@ -1,0 +1,70 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html"> 
+<link rel="import" href="../../bower_components/paper-button/paper-button.html"> 
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html"> 
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html"> 
+<link rel="import" href="x-accordian.html"> 
+<link rel="import" href="x-html.html"> 
+<link rel="import" href="../elements/elements.html">		
+<dom-module id="x-projects">
+	
+	<template>
+		<iron-ajax id="ajaxelem" method="GET" auto   handle-as="json"  last-response="{{projects}}" on-response="handleResponse">
+		</iron-ajax>
+		<style>
+			body {
+			  background: #fafafa;
+			  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			  color: #333;
+			}
+			paper-material {
+				background:white;			
+				border-radius: 2px;
+			    padding: 6px 16px 16px 16px;  
+			    margin: 16px 6px 20px 6px;
+			}
+
+
+
+		</style>
+		<template is="dom-repeat" items="{{projects}}">
+			<paper-material elevation="1">
+				
+                <H1>{{item.name}}</H1>
+                
+
+                <x-html innercontent="{{item.description}}"></x-html>
+                <p>Click on a heading for more details</p>
+            	<template is="dom-repeat" items="{{item.projects}}">
+            		
+					<x-accordian name="{{item.name}}" description="{{item.description}}" </x-accordian>	
+
+            	</template>
+           
+
+
+
+			</paper-material>
+		</template>
+	</template>
+	<script>
+
+
+	Polymer({
+		is: 'x-projects',
+		projects:[],
+		properties: {
+              url: String
+            },
+		ready: function (){
+				console.log('in x-projects');
+				this.$.ajaxelem.url=this.url;
+		},
+		handleResponse: function (request){
+				console.log('Received response');
+				console.log(request.detail.response);
+		}
+	})
+	</script>
+</dom-module>

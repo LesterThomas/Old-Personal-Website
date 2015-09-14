@@ -1,0 +1,42 @@
+{
+  "name": "iron-collapse",
+  "version": "1.0.0",
+  "description": "Provides a collapsable container",
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "container"
+  ],
+  "main": "index.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolymerElements/iron-collapse"
+  },
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerElements/iron-collapse",
+  "ignore": [],
+  "dependencies": {
+    "google-youtube": "GoogleWebComponents/google-youtube#1.1.0",
+    "iron-ajax": "PolymerElements/iron-ajax#1.0.0",
+    "iron-collapse": "PolymerElements/iron-collapse#1.0.0",
+    "iron-fit-behavior": "PolymerElements/iron-fit-behavior#1.0.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#1.0.0",
+    "iron-icon": "PolymerElements/iron-icon#1.0.0",
+    "iron-icons": "PolymerElements/iron-icons#1.0.0",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#1.0.0",
+    "iron-image": "PolymerElements/iron-image#1.0.0",
+    "iron-input": "PolymerElements/iron-input#1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^1.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}

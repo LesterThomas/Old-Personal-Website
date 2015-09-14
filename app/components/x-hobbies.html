@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html"> 
+<link rel="import" href="../elements/elements.html">		
+<dom-module id="x-hobbies">
+	
+	<template>
+		<style>
+			body {
+			  background: #fafafa;
+			  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			  color: #333;
+			}
+			paper-material {
+				background:white;			
+				border-radius: 2px;
+			    padding: 6px 16px 16px 16px;  
+			    margin: 16px 6px 20px 6px;
+			}
+
+
+
+		</style>
+		<template is="dom-repeat" items="{{hobbies}}">
+			<paper-material elevation="1">
+				
+                <H1>{{item.name}}</H1>
+                
+                <div class="layout center horizontal  wrap"> 
+                	<template is="dom-repeat" items="{{item.videos}}">
+	                    <div class="flex" style="padding:20px; min-width: 240px;  max-width: 520px;">
+	                      <google-youtube video-id="{{item.id}}" height="270px" width="480px" rel="0" start="5" autoplay="0"></google-youtube>
+	                    </div>
+                    </template>
+                </div>
+
+
+
+			</paper-material>
+		</template>
+	</template>
+	<script>
+	Polymer({
+		is: 'x-hobbies',
+		hobbies:[],
+		ready: function (){
+			this.hobbies=[
+				{name:'DJI Phantom', videos:[{id:'OJHo1WvjAxw'},{id:'kyH_DILwG8I'},{id:'NdaWpwsqYYY'},{id:'pHziyRYUznE'}]},
+				{name:'Arduino APM UAV',videos:[{id:'SQ_LqgyiuCk'}]},
+				{name:'GT450 Microlight',videos:[{id:'nbWkxptnCx4'},{id:'mtfaox5mDoQ'}]}];
+		}
+	})
+	</script>
+</dom-module>

@@ -1,0 +1,21 @@
+<dom-module id="x-html">
+    <template>
+        <div id="content"></div>
+    </template>
+    <script>
+        Polymer({
+            is:'x-html',
+            properties: {
+              innercontent: String
+            },
+
+            ready: function(){
+                console.log(this.innercontent);
+                this.$.content.innerHTML = this.innercontent;
+            },
+            innerHTMLChanged: function(){
+                this.$.content.innerHTML = this.innercontent;
+            }
+        });
+    </script>
+</dom-module>
